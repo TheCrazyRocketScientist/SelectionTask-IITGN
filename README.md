@@ -19,7 +19,8 @@ This project explores **tap detection on a glass panel** using an accelerometer 
 - **ESP32 WROOM32** (for data processing & wireless communication)  
 - **LED indicators** (for tap classification)  
 
-![Hardware Setup](link-to-image)  <!-- Add a clear image -->
+![Hardware Setup](https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/blob/main/media/1.jpg)
+  <!-- Add a clear image -->
 
 ### **Circuit Diagram**
 *(Include a basic Fritzing diagram if possible.)*
