@@ -3,7 +3,8 @@ A repo for the second selection task for SRIP 2025(Project Number: IP0NB0000020)
 
 # **Vibration Touch Panel Detection Using Machine Learning**  
 
-[![Project Demo](link-to-demo-gif)](https://drive.google.com/file/d/1uDxNBh5HJWYnU6AcdXWhjCefAiLLjtly/view?usp=sharing)  
+[![Project Demo Video](link-to-demo-gif)](https://drive.google.com/file/d/1uDxNBh5HJWYnU6AcdXWhjCefAiLLjtly/view?usp=sharing)  
+
 ## **Overview**
 This project explores **tap detection on a glass panel** using an accelerometer (ADXL345) and an ESP32 microcontroller. Machine learning models (RandomForest, LightGBM, XGBoost) were used to classify vibrations, enabling precise touch interaction.
 
