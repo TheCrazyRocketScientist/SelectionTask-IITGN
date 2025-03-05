@@ -3,7 +3,7 @@ A repo for the second selection task for SRIP 2025(Project Number: IP0NB0000020)
 
 # **Vibration Touch Panel Detection Using Machine Learning**  
 
-[![Project Demo Video](link-to-demo-gif)](https://drive.google.com/file/d/1uDxNBh5HJWYnU6AcdXWhjCefAiLLjtly/view?usp=sharing)  
+[![Project Demo Video](link-to-demo)](https://drive.google.com/file/d/1uDxNBh5HJWYnU6AcdXWhjCefAiLLjtly/view?usp=sharing)  
 
 ## **Overview**
 This project explores **tap detection on a glass panel** using an accelerometer (ADXL345) and an ESP32 microcontroller. Machine learning models (RandomForest, LightGBM, XGBoost) were used to classify vibrations, enabling precise touch interaction.
@@ -72,16 +72,20 @@ This project explores **tap detection on a glass panel** using an accelerometer 
 ## **Setup & Usage**
 ### **🔹 1. Create an anaconda virtual environment**
 ```sh
-conda create -n test_env python=3.13.2
+conda create -n selectionTask python=3.13.2
 ```
-### **🔹 2. Install Dependencies**
+### **🔹 2. Activate The Virtual Environment**
+```sh
+conda activate selectionTask
+```
+### **🔹 3. Install Dependencies**
 ```sh
 pip install -r requirements.txt
 ```
-### **🔹 3. Clone This Repo**
+### **🔹 4. Clone This Repo**
 ```sh
 git clone https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/
 ```
-### **🔹 4. Run Required Files**
+### **🔹 5. Run Required Files**
 
 
