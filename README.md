@@ -3,8 +3,7 @@ A repo for the second selection task for SRIP 2025(Project Number: IP0NB0000020)
 
 # **Vibration Touch Panel Detection Using Machine Learning**  
 
-[![Project Demo](link-to-demo-gif)](link-to-full-video)  <!-- Add this if possible -->
-
+[![Project Demo](link-to-demo-gif)](https://drive.google.com/file/d/1uDxNBh5HJWYnU6AcdXWhjCefAiLLjtly/view?usp=sharing)  
 ## **Overview**
 This project explores **tap detection on a glass panel** using an accelerometer (ADXL345) and an ESP32 microcontroller. Machine learning models (RandomForest, LightGBM, XGBoost) were used to classify vibrations, enabling precise touch interaction.
 
@@ -19,29 +18,30 @@ This project explores **tap detection on a glass panel** using an accelerometer 
 - **ESP32 WROOM32** (for data processing & wireless communication)  
 - **LED indicators** (for tap classification)  
 
-![Hardware Setup](https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/blob/main/media/1.jpg)
-  <!-- Add a clear image -->
+![Hardware Setup 1](https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/blob/main/media/1.jpg)
+![Hardware Setup 2](https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/blob/main/media/2.jpg)
+
 
 ### **Circuit Diagram**
-*(Include a basic Fritzing diagram if possible.)*
-
+![Circuit Diagram](https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/blob/main/media/circuit_bb.png)
 ---
 
 ## **Software Implementation**
 ### **1️⃣ Data Collection**
 - Raw acceleration data `[X, Y, Z, Tap, Double_Tap]` collected at **100Hz**  
-- Data stored as a **CSV file** for training (imu_data.csv in the repo) 
+- Data stored as a **CSV file** for training (imu_data.csv in the media folder) 
 
 ### **2️⃣ Feature Engineering**
-- Sliding window approach: **Window size: 50 samples (0.5 sec), Overlap: 25 samples (50%)**  
+- Sliding window approach: **Window size: 100 samples (0.5 sec), Overlap: 25 samples**  
 - Extracted features:
   - **Statistical Features of Time and Frequency-domain**: Mean, Max, Min, Variance, IQR, etc.
   - **Frequency-domain exclusive (Future Work)**: energy, entropy, SMA 
 
 ### **3️⃣ Model Training**
 - **Models Used:** RandomForest, XGBoost, LightGBM  
-- **Feature Selection:** Recursive Feature Elimination (RFE) → Selected **25 best features**  
-- **Hyperparameter tuning:** Grid Search CV 
+- **Feature Selection:** Recursive Feature Elimination (RFE) → Selected **20 best features**  
+- **Hyperparameter tuning:** Grid Search CV
+- **Training Data** (X_train.csv in data folder)
 
 ### **4️⃣ Real-Time Inference**
 - Buffer-based real-time prediction  
@@ -69,6 +69,18 @@ This project explores **tap detection on a glass panel** using an accelerometer 
 ---
 
 ## **Setup & Usage**
-### **🔹 1. Install Dependencies**
+### **🔹 1. Create an anaconda virtual environment**
+```sh
+conda create -n test_env python=3.13.2
+```
+### **🔹 2. Install Dependencies**
 ```sh
 pip install -r requirements.txt
+```
+### **🔹 3. Clone This Repo**
+```sh
+git clone https://github.com/TheCrazyRocketScientist/SelectionTask-IITGN/
+```
+### **🔹 4. Run Required Files**
+
+
